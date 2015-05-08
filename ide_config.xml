@@ -1,0 +1,24 @@
+<application>
+<name>BuilderStats</name>
+<author>Kavitha Christo</author>
+<version>2.0</version>
+<description>Counts lines of code.</description>
+<license>Free to use and especially improve. </license>	
+	
+	<!-- Add menu contributions to RDS Data View -->	   
+    <menucontributions >
+		<contribution target="projectview" >
+			<menu name="Builder Stats">
+				<action name="Gather CFC Statistics" handlerid="gatherCFCStats" />
+				<action name="Gather File Statistics" handlerid="gatherFileStats" />
+			</menu>
+	</contribution>
+    </menucontributions>	
+
+	<!-- Define Handlers-->
+	<handlers>		
+		<handler id="gatherFileStats" type="CFM" filename="gatherFileStats.cfm" />
+		<handler id="gatherCFCStats" type="CFM" filename="gatherCFCStats.cfm" />
+	</handlers>
+
+</application>
